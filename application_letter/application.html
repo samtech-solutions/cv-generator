@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>job application letter</title>
+    <link href="jquery-ui.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css" media="all"/>
+	<script src="external/jquery/jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script src="jsPDF/dist/jspdf.min.js"></script>
+    
+    <style>
+ 
+    </style>
+    
+</head>
+<body> 
+   <div id="container">
+     <form id="user_form" onsubmit="return false">
+            <h2 align="center">JOB APPLICATION FORM</h2>
+            <hr>
+          <div id="user_data" class="form-group">
+             <div id=sender_address">
+                <h3 align="center" id="header">Sender Address</h3>
+                  <label><b>Full Name :</b></label>
+                  <input type="text" id="name" name="name"  class="t_input"
+                    placeholder="Enter Full Name" required />
+
+                   <label><b>Home Address :</b></label>
+                   <input type="text" id="address" name="address"  class="t_input" 
+                   placeholder="Enter Home Address" required/>
+
+                   <label><b>Home Town :</b></label>
+                   <input type="text" id="town" name="town"  class="t_input" 
+                   placeholder="Enter Home Town" required/>
+
+                   <label><b>Date  :</b></label>
+                   <input type="date" id="date" name="date"  class="t_input" 
+                   placeholder="Enter Todays Date" required />
+                   <h6 style="text-align:center">***Alert: For Date Use the format 10th November 2021.</h6><br>
+                </div>
+                <hr>
+                <div id=receiver_address">
+                    <h3 align="center" id="header">Receiver Address</h3>
+                    <label><b>Department :</b></label>
+                    <input type="text" id="department" name="department"  class="t_input"
+                    placeholder="Enter Department Name i.e The Human Resource Manager" required />
+
+                    <label><b>Company Name :</b></label>
+                    <input type="text" id="cname" name="cname"  class="t_input" 
+                    placeholder="Enter Company Name" required/>
+
+                    <label><b>RE :</b></label>
+                    <input type="text" id="re" name="re"  class="t_input" 
+                    placeholder="Enter Your Reference" required/>
+                    <hr>
+
+                    <div class="letter_body">
+                        <h3 align="center" id="header">Letter Body</h3>
+                        <h6 style="text-align:center">***Alert: To get to the next line Press Enter Key.</h6><br>
+                        <label><b>Letter  :</b></label><br>
+                        <textarea  type="text" id="letter" name="letter"  class="tb_input1"
+                            placeholder="Type Your Letter here" required></textarea><br>
+                       
+                    </div>
+                    <div class="conclusion">
+                      <p style="text-align:left">Yours Faithfully</p>
+                      <p style="text-align:left">____________</p>
+                      <p style="text-align:left">Your Name</p>
+                      
+                    </div>
+               </div>
+                <br>
+                <p align="center"><button class="btn btn-success" id="create" 
+                onclick="createletter()">Create Application</button></p>
+             </div>
+             <p>**Alert: Your Letter has been created successfully.Go to downloads and locate for
+                Application.pdf</p>
+        </div>
+      </form>
+      <div id="pop-up">
+        <div id="close-btn">x</div>
+        <h1 style="text-align:center;color:blue">Support Us :</h1>
+         <h4>Donate to support our Hosting charges and Maintenance.</h4>
+        <a href="../donation.html" target="_blank">Make Your Donation -></a>
+        <p>Thanks for supporting Us.</p>   
+     </div>
+   </div>
+   <script src="../js/custom.js"></script>
+</body>
+</html>
+
+<script>
+        var name,address,town,date,department,cname,re,letter;
+      
+        function createletter(){
+             var doc = new jsPDF('p','mm','a4');
+
+                doc.setFontType("bold");
+                doc.setFontSize("16");
+                doc.text(60,10,"Job Application Letter");
+                doc.setFontType("normal");
+                doc.text(60,12,"--------------------------------");
+
+                doc.setFontSize("11");
+                doc.setFontType("normal");
+                doc.text(140,20,""+document.getElementById("name").value);
+                doc.setFontType("normal");
+                doc.text(140,30,""+document.getElementById("address").value);
+                doc.text(140,35,""+document.getElementById("town").value);
+                doc.setFontType("normal");
+                doc.text(140,45,""+document.getElementById("date").value);
+               
+               
+                doc.setFontSize("10");
+                doc.setFontType("normal");
+                doc.text(10,55,""+document.getElementById("department").value);
+ 
+                doc.setFontSize("10");
+                doc.setFontType("normal");
+                doc.text(10,65,""+document.getElementById("cname").value);
+                
+                doc.setFontSize("10");
+                doc.setFontType("normal");
+                doc.text(10,75,"Dear Sir/Madam,");
+
+                
+                doc.setFontType("bold");
+                doc.text(20,85,"RE : "+document.getElementById("re").value);
+                doc.text(25,86,"-------------------------------------------------------------------");
+
+                doc.setFontType("normal");
+                doc.setFontSize("10");
+                doc.text(10,95,""+document.getElementById("letter").value);
+
+                doc.setFontSize("10");
+                doc.setFontType("normal");
+                doc.text(10,210,"Yours faithfully");
+
+                doc.setFontSize("10");
+                doc.setFontType("normal");
+                doc.text(10,220,"-----------");
+
+                doc.setFontSize("11");
+                doc.setFontType("normal");
+                doc.text(10,230,""+document.getElementById("name").value);
+
+                doc.setFontType("bold");
+                doc.text(30,270,"******************************************************************************** ");
+                var date= new Date();
+                doc.setFontType("normal");
+                var dateString = "Created by iSam Developers on "+ date;
+                doc.text(dateString,40,280);
+
+                    //save the document
+                doc.save("application letter.pdf");
+                
+          }
+        
+    </script>
+   

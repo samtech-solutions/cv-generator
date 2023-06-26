@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image to pdf from file</title>
+</head>
+<body>
+     <input type="file" onchange="encodeImage(this)">
+     <button onclick="createPdf()">Create PDF</button>
+</body>
+</html>
+<script src="jsPDF/dist/jspdf.min.js"></script>
+
+<script>
+    var imgData =''
+    function encodeImage(image){
+        var img = image.files[0]
+        var file = new FileReader()
+            file.onloadend = function(){
+            imgdata = file.result
+            console.log(file.result)
+        }
+        file.readAsDataURL(img)
+    }
+   function createPdf(){
+       var doc = new jsPDF()
+           doc.addImage(imgdata,15,15)
+           doc.save("output.pdf")
+   }
+</script>

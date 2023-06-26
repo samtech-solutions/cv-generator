@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+ <html>
+     <head>
+         <title>document upload</title>
+         <link rel="stylesheet" type="text/css" href="bootstrap.min.css" media="all"/>
+         <style>
+         /*-----------------Viewport less than or equal to 900px----------------*/
+ @media (max-width:1024px){   
+             body{
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
+                 flex-direction: column;
+                 min-height: 50vh;   
+             }
+              input{
+                padding: 10px;
+                align-items: left;
+              }
+              select{
+                  width:60%;
+                  height:30px;
+              }
+              p{
+                  color:red;
+              }
+              label{
+                  color:green
+              }
+            }
+              /*-----------------Viewport less than or equal to 450px----------------*/
+ 
+ @media (max-width:450px){
+         body{   
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 40vh;   
+             }
+              input{
+                padding: 8px;
+                align-items: left;
+              }
+              select{
+                  width:40%;
+                  height:20px;
+              }
+    }
+         </style>
+     </head>
+     <body>
+          <?php 
+          if(isset($_GET['error'])): ?>
+            <p><?php echo $_GET['error']; ?></p>
+            <?php endif ?>
+            <h1>Upload Your Documents</h1>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+             <label>Document Name : </label><br>
+            <select type="text" id="name" name="name"  class="" 
+                placeholder="Choose a document to Upload" required >
+                          <option value=""></option>
+                          <option value="ID Front side">ID Front side</option>
+                          <option value="ID Back side">ID Back side</option>
+                          <option value="Good Conduct">Good Conduct</option>
+                          <option value="Recomendation Letter">Recomendation Letter</option>
+                          <option value="Primary Leaving Cert">Primary Leaving Cert</option>
+                          <option value="Secondary Leaving Cert">Secondary Leaving Cert</option>
+                          <option value="College Cert">College Cert</option>
+                          <option value="Other Cert">Other Cert</option>
+                          <option value="Driving Licence">Driving Licence</option>
+                          </select>
+               <p>**NOTE: Upload Scanned Documents.</p>    
+            <input type="file" name="my_image"><br>
+            <input type="submit" name="submit" value="Upload" class="btn btn-primary">
+        </form>
+        
+     </body>
+ </html>
+ 

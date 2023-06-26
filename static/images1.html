@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsPDF image to pdf from file</title>
+    <script src="jsPDF/dist/jspdf.min.js"></script>
+    <script src="html2canvas.min.js"></script>
+</head>
+<body>
+     
+     <div id="someHtml">
+        <h1>This is some html</h1>
+        <img src="download (12).jpg" />
+     </div>
+
+     <button onclick="generatePdf()">Save Pdf</button>
+
+</body>
+</html>
+
+<script>
+       
+        var div = document.querySelector("#someHtml");
+
+        function generatePdf(){
+            var imgData;
+            html2canvas($('#someHtml'),{
+                useCORS:true,
+                onrendered:function(canvas){
+                   imgData = canvas.toDataURL('image/png');
+                   //make the pdf document jspdf
+                   var doc = new jsPDF('p','pt','a4');
+
+                   doc.addImage(imgData,'PNG',10,10);
+                   //save the pdf document
+                   doc.save('image-file.pdf');
+                   
+                   window.open(imgData);
+                }
+            });
+        }
+       
+</script>

@@ -1,0 +1,749 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>job application letter</title>
+    <link href="jquery-ui.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+	  <link rel="stylesheet" type="text/css" href="bootstrap.min.css" media="all"/>
+	  <script src="external/jquery/jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script src="jsPDF/dist/jspdf.min.js"></script>
+    <script src="html2canvas.min.js"></script>
+    <style>
+           /*-----------------Viewport less than or equal to 1440px----------------*/
+ 
+ @media (max-width:1440px){
+      body{
+        background-color:gray;
+      }
+      form#user_form{
+       border:#000 5px solid;
+       padding:10px;
+       width:800px;
+       height:auto;
+       margin-top:10px;
+       margin-left:50px;
+       border-left:6px solid gray;
+       border-bottom:6px solid gray;
+       background-color:lightgray;
+       display:block;
+       padding-top:2px;
+       padding-bottom:10px;
+       font-size:18px;
+      }
+     
+      .t_input{
+        border:none;
+        border-bottom:2px solid lightblue;
+        background-color:white;
+        margin-left:10px;
+        margin-top:5px;
+        margin-bottom:5px;
+        font-size:17px;
+        width:550px;
+        height:40px;
+        text-align:left;
+        padding-left:10px;
+      }
+      .tb_input1{
+        border:none;
+        border-bottom:2px solid lightblue;
+        background-color:white;
+        margin-left:10px;
+        margin-top:5px;
+        margin-bottom:5px;
+        font-size:17px;
+        width:740px;
+        height:400px;
+        text-align:left;
+        padding-left:10px;
+      }
+      h2{
+        color:blue;
+        text-decoration:underline;
+      }
+      h3{
+          color:green;
+          text-decoration:underline;
+      }
+      h6{
+        color:red;
+      }
+      p{
+        color:purple;
+        text-align:center;
+
+      }
+      
+      label{
+        color:blue;
+        text-align:right;
+        width:23%;
+      }
+      #details>label{
+        color:blue;
+        text-align:right;
+        margin-left:10px;
+        width:23%;
+      }
+       .tb_input{
+        border:none;
+        border-bottom:2px solid lightblue;
+        background-color:white;
+        margin-left:10px;
+        margin-top:5px;
+        margin-bottom:5px;
+        font-size:17px;
+        width:650px;
+        height:40px;
+        text-align:left;
+        padding-left:10px;
+      }
+      .user_data{
+       background-color:white;
+       border-collapse:collapse;
+       height:100%;
+      }
+      .table_input{
+        font-size:16px;
+        border: 1px solid #f2f2f2;
+        width:100%;
+        height:30px;
+      }
+      .table-button{
+        width:140px;
+        height:40px;
+        border:2px solid black;
+        background-color:#333;
+        margin-right:10px;
+        border-radius:40px;
+        color:green;
+      }
+        hr{
+          border:2px solid white;
+        }
+        .btn-success{
+        width:200px;
+        height:40px;
+        border:2px solid black;
+        background-color:#890;
+        margin-right:0px;
+        border-radius:20px;
+       margin-bottom:20px;
+        }
+        span{
+          color:yellow;
+        }
+        table{
+       background-color:white;
+       border-collapse:collapse;
+       
+      }
+      input:hove{
+        background-color:rgb(187, 154, 179);
+	      border-bottom:4px solid rgb(190, 93, 158);
+        font-size:25px;   
+      }
+      .image:hove{
+        background:transparent;
+	      border:4px solid rgb(164, 164, 235);
+      }
+      textarea:hove{
+        background-color:rgb(167, 108, 108);
+	      border-bottom:4px solid rgb(36, 143, 125); 
+        font-size:20px;
+      }
+    }
+
+              /*-----------------Viewport less than or equal to 780px----------------*/
+ 
+ @media (max-width:780px){
+      body{
+        background-color:gray;
+      }
+      form#user_form{
+       border:#000 5px solid;
+       padding:10px;
+       width:700px;
+       height:auto;
+       margin-top:5px;
+       margin-left:30px;
+       border-left:6px solid gray;
+       border-bottom:6px solid gray;
+       background-color:lightgray;
+       display:block;
+       padding-top:2px;
+       padding-bottom:10px;
+       font-size:18px;
+      }
+     
+      .t_input{
+        border:none;
+        border-bottom:2px solid lightblue;
+        background-color:white;
+        margin-left:10px;
+        margin-top:5px;
+        margin-bottom:5px;
+        font-size:17px;
+        width:450px;
+        height:40px;
+        text-align:left;
+        padding-left:10px;
+      }
+      .tb_input1{
+        border:none;
+        border-bottom:2px solid lightblue;
+        background-color:white;
+        margin-left:10px;
+        margin-top:5px;
+        margin-bottom:5px;
+        font-size:17px;
+        width:600px;
+        height:300px;
+        text-align:left;
+        padding-left:10px;
+      }
+      h2{
+        color:blue;
+        text-decoration:underline;
+      }
+      h3{
+          color:green;
+          text-decoration:underline;
+      }
+      h6{
+        color:red;
+      }
+      p{
+        color:purple;
+        text-align:center;
+
+      }
+      
+      label{
+        color:blue;
+        text-align:right;
+        width:23%;
+      }
+      #details>label{
+        color:blue;
+        text-align:right;
+        margin-left:10px;
+        width:23%;
+      }
+       .tb_input{
+        border:none;
+        border-bottom:2px solid lightblue;
+        background-color:white;
+        margin-left:10px;
+        margin-top:5px;
+        margin-bottom:5px;
+        font-size:17px;
+        width:450px;
+        height:40px;
+        text-align:left;
+        padding-left:10px;
+      }
+      .user_data{
+       background-color:white;
+       border-collapse:collapse;
+       height:100%;
+      }
+      .table_input{
+        font-size:16px;
+        border: 1px solid #f2f2f2;
+        width:100%;
+        height:30px;
+      }
+      .table-button{
+        width:140px;
+        height:40px;
+        border:2px solid black;
+        background-color:#333;
+        margin-right:10px;
+        border-radius:40px;
+        color:green;
+      }
+        hr{
+          border:2px solid white;
+        }
+        .btn-success{
+        width:200px;
+        height:40px;
+        border:2px solid black;
+        background-color:#890;
+        margin-right:0px;
+        border-radius:20px;
+       margin-bottom:20px;
+        }
+        span{
+          color:yellow;
+        }
+        table{
+       background-color:white;
+       border-collapse:collapse;
+       
+      }
+      input:hover{
+        background-color:rgb(187, 154, 179);
+	      border-bottom:4px solid rgb(190, 93, 158);
+        font-size:25px;   
+      }
+      .image:hover{
+        background:transparent;
+	      border:4px solid rgb(164, 164, 235);
+      }
+      textarea:hover{
+        background-color:rgb(167, 108, 108);
+	      border-bottom:4px solid rgb(36, 143, 125); 
+        font-size:20px;
+      }
+    }
+ 
+                /*-----------------Viewport less than or equal to 525px----------------*/
+ 
+ @media (max-width:525px){
+      body{
+        background-color:gray;
+      }
+      form#user_form{
+       border:#000 5px solid;
+       padding:10px;
+       width:470px;
+       height:auto;
+       margin-top:5px;
+       margin-left:5px;
+       border-left:6px solid gray;
+       border-bottom:6px solid gray;
+       background-color:lightgray;
+       display:block;
+       padding-top:2px;
+       padding-bottom:10px;
+       font-size:18px;
+      }
+     
+      .t_input{
+        border:none;
+        border-bottom:2px solid lightblue;
+        background-color:white;
+        margin-left:10px;
+        margin-top:5px;
+        margin-bottom:5px;
+        font-size:17px;
+        width:420px;
+        height:40px;
+        text-align:left;
+        padding-left:10px;
+      }
+      .tb_input1{
+        border:none;
+        border-bottom:2px solid lightblue;
+        background-color:white;
+        margin-left:10px;
+        margin-top:5px;
+        margin-bottom:5px;
+        font-size:17px;
+        width:420px;
+        height:300px;
+        text-align:left;
+        padding-left:10px;
+      }
+      h2{
+        color:blue;
+        text-decoration:underline;
+        font-size:20px;
+      }
+      h3{
+          color:green;
+          text-decoration:underline;
+          font-size:18px;
+      }
+      h6{
+        color:red;
+        font-size:16px;
+      }
+      p{
+        color:purple;
+        text-align:center;
+        font-size:16px;
+
+      }
+      
+      label{
+        color:blue;
+        text-align:right;
+        width:40%;
+      }
+      #details>label{
+        color:blue;
+        text-align:right;
+        margin-left:10px;
+        width:40%;
+      }
+       .tb_input{
+        border:none;
+        border-bottom:2px solid lightblue;
+        background-color:white;
+        margin-left:10px;
+        margin-top:5px;
+        margin-bottom:5px;
+        font-size:17px;
+        width:420px;
+        height:40px;
+        text-align:left;
+        padding-left:10px;
+      }
+      .user_data{
+       background-color:white;
+       border-collapse:collapse;
+       height:100%;
+      }
+      .table_input{
+        font-size:16px;
+        border: 1px solid #f2f2f2;
+        width:100%;
+        height:30px;
+      }
+      .table-button{
+        width:140px;
+        height:40px;
+        border:2px solid black;
+        background-color:#333;
+        margin-right:10px;
+        border-radius:40px;
+        color:green;
+      }
+        hr{
+          border:2px solid white;
+        }
+        .btn-success{
+        width:200px;
+        height:40px;
+        border:2px solid black;
+        background-color:#890;
+        margin-right:0px;
+        border-radius:20px;
+       margin-bottom:20px;
+        }
+        span{
+          color:yellow;
+        }
+        table{
+       background-color:white;
+       border-collapse:collapse;
+       
+      }
+      input:hover{
+        background-color:rgb(187, 154, 179);
+	      border-bottom:4px solid rgb(190, 93, 158);
+        font-size:25px;   
+      }
+      .image:hover{
+        background:transparent;
+	      border:4px solid rgb(164, 164, 235);
+      }
+      textarea:hover{
+        background-color:rgb(167, 108, 108);
+	      border-bottom:4px solid rgb(36, 143, 125); 
+        font-size:20px;
+      }
+    }
+      /*-----------------Viewport less than or equal to 325px----------------*/
+
+ @media (max-width:325px){
+  body{
+        background-color:gray;
+      }
+      form#user_form{
+       border:#000 2px solid;
+       padding:10px;
+       width:300px;
+       height:auto;
+       margin-top:5px;
+       margin-left:10px;
+       border-left:1px solid gray;
+       border-bottom:1px solid gray;
+       background-color:lightgray;
+       display:block;
+       padding-top:2px;
+       padding-bottom:5px;
+       font-size:12px;
+      }
+     
+      .t_input{
+        border:none;
+        border-bottom:2px solid lightblue;
+        background-color:white;
+        margin-left:10px;
+        margin-top:5px;
+        margin-bottom:5px;
+        font-size:17px;
+        width:260px;
+        height:40px;
+        text-align:left;
+        padding-left:10px;
+      }
+      .tb_input1{
+        border:none;
+        border-bottom:2px solid lightblue;
+        background-color:white;
+        margin-left:10px;
+        margin-top:5px;
+        margin-bottom:5px;
+        font-size:17px;
+        width:260px;
+        height:200px;
+        text-align:left;
+        padding-left:10px;
+      }
+      h2{
+        color:blue;
+        text-decoration:underline;
+        font-size:16px;
+      }
+      h3{
+          color:green;
+          text-decoration:underline;
+          font-size:14px;
+      }
+      h6{
+        color:red;
+        font-size:15px;
+      }
+      p{
+        color:purple;
+        text-align:center;
+        font-size:15px;
+
+      }
+      
+      label{
+        color:blue;
+        text-align:right;
+        width:40%;
+      }
+      #details>label{
+        color:blue;
+        text-align:right;
+        margin-left:10px;
+        width:40%;
+      }
+       .tb_input{
+        border:none;
+        border-bottom:2px solid lightblue;
+        background-color:white;
+        margin-left:10px;
+        margin-top:5px;
+        margin-bottom:5px;
+        font-size:17px;
+        width:260px;
+        height:40px;
+        text-align:left;
+        padding-left:10px;
+      }
+      .user_data{
+       background-color:white;
+       border-collapse:collapse;
+       height:100%;
+      }
+      .table_input{
+        font-size:16px;
+        border: 1px solid #f2f2f2;
+        width:100%;
+        height:30px;
+      }
+      .table-button{
+        width:140px;
+        height:40px;
+        border:2px solid black;
+        background-color:#333;
+        margin-right:10px;
+        border-radius:40px;
+        color:green;
+      }
+        hr{
+          border:1px solid white;
+        }
+        .btn-success{
+        width:200px;
+        height:40px;
+        border:1px solid black;
+        background-color:#890;
+        margin-right:0px;
+        border-radius:20px;
+       margin-bottom:20px;
+        }
+        span{
+          color:yellow;
+        }
+        table{
+       background-color:white;
+       border-collapse:collapse;
+       
+      }
+      input:hover{
+        background-color:rgb(187, 154, 179);
+	      border-bottom:4px solid rgb(190, 93, 158);
+        font-size:25px;   
+      }
+      .image:hover{
+        background:transparent;
+	      border:4px solid rgb(164, 164, 235);
+      }
+      textarea:hover{
+        background-color:rgb(167, 108, 108);
+	      border-bottom:4px solid rgb(36, 143, 125); 
+        font-size:20px;
+      }
+  }
+    </style>
+    
+</head>
+<body> 
+   <div id="container">
+     <form id="user_form" onsubmit="return false">
+            <h2 align="center">JOB APPLICATION FORM</h2>
+            <hr>
+          <div id="user_data" class="form-group">
+             <div id=sender_address">
+                <h3 align="center" id="header">Sender Address</h3>
+                  <label><b>Full Name :</b></label>
+                  <input type="text" id="name" name="name"  class="t_input"
+                    placeholder="Enter Full Name" required />
+
+                   <label><b>Home Address :</b></label>
+                   <input type="text" id="address" name="address"  class="t_input" 
+                   placeholder="Enter Home Address" required/>
+
+                   <label><b>Home Town :</b></label>
+                   <input type="text" id="town" name="town"  class="t_input" 
+                   placeholder="Enter Home Town" required/>
+
+                   <label><b>Date  :</b></label>
+                   <input type="date" id="date" name="date"  class="t_input" 
+                   placeholder="Enter Todays Date" required />
+                   <h6 style="text-align:center">***Alert: For Date Use the format 10th November 2021.</h6><br>
+                </div>
+                <hr>
+                <div id=receiver_address">
+                    <h3 align="center" id="header">Receiver Address</h3>
+                    <label><b>Department :</b></label>
+                    <input type="text" id="department" name="department"  class="t_input"
+                    placeholder="Enter Department Name i.e The Human Resource Manager" required />
+
+                    <label><b>Company Name :</b></label>
+                    <input type="text" id="cname" name="cname"  class="t_input" 
+                    placeholder="Enter Company Name" required/>
+
+                    <label><b>RE :</b></label>
+                    <input type="text" id="re" name="re"  class="t_input" 
+                    placeholder="Enter Your Reference" required/>
+                    <hr>
+
+                    <div class="letter_body">
+                        <h3 align="center" id="header">Letter Body</h3>
+                        <h6 style="text-align:center">***Alert: To get to the next line Press Enter Key.</h6><br>
+                        <label><b>Letter  :</b></label><br>
+                        <textarea  type="text" id="letter" name="letter"  class="tb_input1"
+                            placeholder="Type Your Letter here" required></textarea><br>
+                       
+                    </div>
+                    <div class="conclusion">
+                      <p style="text-align:left">Yours Faithfully</p>
+                      <p style="text-align:left">____________</p>
+                      <p style="text-align:left">Your Name</p>
+                      
+                    </div>
+               </div>
+                <br>
+                <p align="center"><button class="btn btn-success" id="create" 
+                onclick="createletter()">Create Application</button></p>
+             </div>
+             <p>**Alert: Your Letter has been created successfully.Go to downloads and locate for
+                Application.pdf</p>
+        </div>
+      </form>
+      <div id="pop-up">
+        <div id="close-btn">x</div>
+        <h1 style="text-align:center;color:blue">Support Us :</h1>
+         <h4>Donate to support our Hosting charges and Maintenance.</h4>
+        <a href=donation.html target="_blank"><h3>Make Your Donation -></h3></a>
+        <p>Thanks for supporting Us.</p>   
+     </div>
+   </div>
+   <script src="custom.js"></script>
+</body>
+</html>
+
+<script>
+        var name,address,town,date,department,cname,re,letter;
+      
+        function createletter(){
+             var doc = new jsPDF('p','mm','a4');
+
+                doc.setFontType("bold");
+                doc.setFontSize("16");
+                doc.text(60,10,"Job Application Letter");
+                doc.setFontType("normal");
+                doc.text(60,12,"--------------------------------");
+
+                doc.setFontSize("11");
+                doc.setFontType("normal");
+                doc.text(140,20,""+document.getElementById("name").value);
+                doc.setFontType("normal");
+                doc.text(140,30,""+document.getElementById("address").value);
+                doc.text(140,35,""+document.getElementById("town").value);
+                doc.setFontType("normal");
+                doc.text(140,45,""+document.getElementById("date").value);
+               
+               
+                doc.setFontSize("10");
+                doc.setFontType("normal");
+                doc.text(10,55,""+document.getElementById("department").value);
+ 
+                doc.setFontSize("10");
+                doc.setFontType("normal");
+                doc.text(10,65,""+document.getElementById("cname").value);
+                
+                doc.setFontSize("10");
+                doc.setFontType("normal");
+                doc.text(10,75,"Dear Sir/Madam,");
+
+                
+                doc.setFontType("bold");
+                doc.text(20,85,"RE : "+document.getElementById("re").value);
+                doc.text(25,86,"-------------------------------------------------------------------");
+
+                doc.setFontType("normal");
+                doc.setFontSize("10");
+                doc.text(10,95,""+document.getElementById("letter").value);
+
+                doc.setFontSize("10");
+                doc.setFontType("normal");
+                doc.text(10,210,"Yours faithfully");
+
+                doc.setFontSize("10");
+                doc.setFontType("normal");
+                doc.text(10,220,"-----------");
+
+                doc.setFontSize("11");
+                doc.setFontType("normal");
+                doc.text(10,230,""+document.getElementById("name").value);
+
+                doc.setFontType("bold");
+                doc.text(30,270,"******************************************************************************** ");
+                var date= new Date();
+                doc.setFontType("normal");
+                var dateString = "Created by iSam Developers on "+ date;
+                doc.text(dateString,40,280);
+
+                    //save the document
+                doc.save("application.pdf");
+                
+          }
+        
+    </script>
+   

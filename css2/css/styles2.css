@@ -1,0 +1,389 @@
+    h3{
+          color:green !important;
+          text-decoration:none;
+      }
+    body{
+        background-color:rgb(246, 239, 239);
+      }      
+       /*-----------------Viewport less than or equal to 1440px----------------*/
+  @media (max-width:1440px){
+      body{
+        background-color:rgb(246, 239, 239);
+      }
+      
+	  .container{
+	   border:#237 2px solid;
+       padding:10px;
+       width:800px;
+       height:auto;
+       margin-top:10px;
+       margin-left:50px;
+	   margin-right:50px;
+       border-left:1px solid gray;
+       border-bottom:1px solid gray;
+       background-color:rgb(246, 237, 237);
+       display:block;
+       padding-top:2px;
+       padding-bottom:10px;
+       font-size:18px;  
+	  }
+      form#user_form>#phase2,#phase3,#phase4,#phase5,#phase6,#phase7,
+         #phase8,#phase9,#show_all_data{
+          display:none; 
+		  margin-left:50px;
+		  
+      }
+      #exampleModalLabel{
+		  color:#46d48c;
+	  }
+     
+      h3{
+          color:green !important;
+          text-decoration:none;
+      }
+	  a{
+	     text-decoration:none !important;
+		 color:green !important;
+      }
+  
+	 
+      h6{
+        color:red;
+      }
+      p{
+        color:purple;
+        text-align:center;
+
+      }
+      #status{
+          color:red;
+          display:center;
+      }
+      label{
+        color:green;
+        text-align:left;
+        width:50%;
+      }
+      #details>label{
+        color:blue;
+        text-align:right;
+        margin-left:10px;
+        width:23%;
+      }
+       
+      
+        hr{
+          border:1px solid white;
+        }
+        .btn-success,
+        .btn-primary{
+        width:auto;
+        height:40px;
+        border:1px solid black;
+        background-color:#890;
+        margin-right:0px;
+        border-radius:20px;
+       margin-bottom:20px;
+        }
+        span{
+          color:yellow;
+        }
+        table{
+        background-color:white;
+        border-collapse:collapse;
+       
+      }
+      .td{
+        height:50%;
+        width:100%;
+        padding:5px;
+      }
+      .td1{
+        height:50%;
+        width:100%;
+        padding:5px;
+      }
+     
+ }
+  /*-----------------Viewport less than or equal to 780px----------------*/
+ @media (max-width:780px){
+  
+      
+      #progressBar{
+        width:400px !important;
+        margin-left:20px;
+      }
+      #status{
+        margin-left:20px;
+      }
+      h2{
+        color:blue;
+        text-decoration:underline;
+      }
+     
+      h3{
+          color:green !important;
+          text-decoration:none;
+      }
+	  a{
+	     text-decoration:none !important;
+		 color:green !important;
+      }
+      h4{
+        font-size:20px;
+      }
+     h6{
+       text-align:left;
+       font-size:16px;
+     }
+     h5{
+       font-size:20px;
+     }
+      label{
+        color:green;
+        text-align:left;
+        width:50%;
+		font-size:12px;
+      }
+      
+        hr{
+          border:1px solid white;
+          width:500px;
+        }
+        .btn-success,
+        .btn-primary{
+        width:auto;
+        height:35px;
+        border:1px solid black;
+        background-color:#890;
+        margin-right:10px;
+        border-radius:20px;
+        margin-top:5px;
+        margin-bottom:15px;
+        padding:4px;
+        }
+        span{
+          color:yellow;
+        }
+table{
+ background-color:white;
+ border-collapse:collapse;
+       
+      }
+      .td{
+        height:50%;
+        width:100%;
+        padding:3px;
+      }
+      .td1{
+        height:50%;
+        width:100%;
+        padding:3px;
+      }
+	   #show_all_data .image{
+       width:150px !important;
+       height:150px !important;
+       padding:5px !important;
+     }
+     #show_all_data p, h4{
+      text-align:center !important;
+     }
+  }
+
+ /*-----------------Viewport less than or equal to 520px----------------*/
+ @media (max-width:520px){
+  
+	  .container{
+		border:#000 1px solid;
+       padding:3px;
+       width:350px;
+       height:auto;
+       margin-top:10px;
+       margin-left:30px;
+       border-left:1px solid gray;
+       border-bottom:1px solid gray;
+       background-color:lightgray;
+       display:block;
+       padding-top:1px;
+       padding-bottom:1px;
+       font-size:10px;  
+	  }
+      
+      #progressBar{
+        width:300px !important;
+      }
+      h2{
+        color:blue;
+        text-decoration:underline;
+      }
+     
+      h3{
+          color:green;
+          text-decoration:none;
+      }
+	  a{
+	     text-decoration:none !important;
+		 color:green !important;
+      }
+      h4{
+        font-size:13px;
+      }
+     h6{
+       text-align:left;
+       font-size:8px;
+     }
+     h5{
+       font-size:12px;
+     }
+      label{
+        color:green;
+        text-align:left;
+        width:50%;
+		font-size:12px;
+      }
+      #details>label{
+        color:blue;
+        text-align:right;
+        margin-left:5px;
+        width:50%;
+      }
+      
+        hr{
+          border:1px solid white;
+          width:250px;
+        }
+        .btn-success,
+        .btn-primary{
+        width:auto;
+        height:35px;
+        border:1px solid black;
+        background-color:#890;
+        margin-right:10px;
+        border-radius:20px;
+        margin-top:5px;
+        margin-bottom:15px;
+        padding:4px;
+        }
+        span{
+          color:yellow;
+        }
+        table{
+       background-color:white;
+       border-collapse:collapse;
+       
+      }
+      .td{
+        height:50%;
+        width:100%;
+        padding:3px;
+      }
+      .td1{
+        height:50%;
+        width:100%;
+        padding:3px;
+      }
+	   #show_all_data .image{
+       width:100px !important;
+       height:100px !important;
+       padding:5px !important;
+     }
+     #show_all_data p, h4{
+      text-align:center !important;
+     }
+  }
+
+ /*-----------------Viewport less than or equal to 375px----------------*/
+ @media (max-width:375px){
+  
+	  .container{
+		border:#000 1px solid;
+       padding:3px;
+       width:350px;
+       height:auto;
+       margin-top:1px;
+       margin-left:10px;
+       border-left:1px solid gray;
+       border-bottom:1px solid gray;
+       background-color:lightgray;
+       display:block;
+       padding-top:1px;
+       padding-bottom:1px;
+       font-size:10px;  
+	  }
+      
+      #progressBar{
+        width:300px !important;
+      }
+      h2{
+        color:blue;
+        text-decoration:underline;
+      }
+      
+      h3{
+          color:green;
+          text-decoration:none;
+      }
+	  a{
+	     text-decoration:none !important;
+		 color:green !important;
+      }
+      h4{
+        font-size:13px;
+      }
+     h6{
+       text-align:left;
+       font-size:8px;
+     }
+     h5{
+       font-size:12px;
+     }
+      label{
+        color:green;
+        text-align:left;
+        width:50%;
+		font-size:12px;
+      }
+      
+        hr{
+          border:1px solid white;
+          width:250px;
+        }
+        .btn-success,
+        .btn-primary{
+        width:80px;
+        height:35px;
+        border:1px solid black;
+        background-color:#890;
+        margin-right:10px;
+        border-radius:20px;
+        margin-top:-5px;
+        margin-bottom:15px;
+        padding:4px;
+        }
+        span{
+          color:yellow;
+        }
+        table{
+       background-color:white;
+       border-collapse:collapse;
+       
+      }
+      .td{
+        height:50%;
+        width:100%;
+        padding:3px;
+      }
+      .td1{
+        height:50%;
+        width:100%;
+        padding:3px;
+      }
+	   #show_all_data .image{
+       width:100px !important;
+       height:100px !important;
+       padding:5px !important;
+     }
+     #show_all_data p, h4{
+      text-align:center !important;
+     }
+  }
