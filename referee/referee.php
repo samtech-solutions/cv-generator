@@ -5,10 +5,11 @@ session_start();
 
  if (isset($_POST['save'])) {
 	$userid =$_SESSION['user-id'];
-    $name =$_POST['name'];
-    $phoneno =$_POST['phoneno'];
-	$position =$_POST['position'];
-  
+
+    $name =filter_var($_POST['name'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $phoneno =filter_var($_POST['phoneno'], FILTER_SANITIZE_NUMBER_INT);
+	$position =filter_var($_POST['position'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+
     $query="INSERT INTO referee(userid,name,phoneno,position) 
                VALUES ('$userid','$name','$phoneno','$position')";
     $result = mysqli_query($conn , $query) or die(mysqli_error($conn));

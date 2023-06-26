@@ -3,8 +3,8 @@ include "../connection.php";
 session_start();
  if (isset($_POST['save'])) {
 	$userid =$_SESSION['user-id'];
-    $name =$_POST['name'];
-   
+
+    $name= filter_var($_POST['name'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
   
     $query="INSERT INTO hobbies(userid,name) 
                VALUES ('$userid','$name')";

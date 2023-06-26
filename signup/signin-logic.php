@@ -7,37 +7,79 @@ if (isset($_POST['submit'])) {
     $password = filter_var($_POST['idno'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
     if (!$username_email) {
-        $_SESSION['signin'] = "Email Required";
+        $_SESSION['signin'] = "Email Address Required";
     } elseif (!$password) {
         $_SESSION['signin'] = "Password Required";
     } else {
+
         //fetch user from database
         $fetch_user_query = "SELECT * FROM tbl_cv WHERE email='$username_email' AND idno='$password'";
         $fetch_user_result = mysqli_query($conn, $fetch_user_query);
 
-        if (mysqli_num_rows($fetch_user_result) == 1) {
+        if (mysqli_num_rows($fetch_user_result) >0) {
             //convert the record into assoc array
             $user_record = mysqli_fetch_assoc($fetch_user_result);
             $db_password = $user_record['idno'];
+            $transid = $user_record['transactionid'];
             //compare password
             if (password_verify($password, $db_password)) {
                 //set session for access control
-                $_SESSION['user-id'] = $user_record['userid'];
-                //set session if user is admin
-                if ($user_record['is_admin'] == 1) {
-                    $_SESSION['user_is_admin'] = true;
+
+                $status = $user_record['status'];
+                echo $status;
+                if ($status == 'verified') {
+                   
+                    $_SESSION['user-id'] = $user_record['userid'];
+                    $_SESSION['password'] = $password;
+                    //log user in
+
+                    //header('location: ' . ROOT_URL . '../education/index.php');
+
+                    //echo "<script>window.location='../loader.php';</script>";
+                    //echo $_SESSION['newuser'];
+                    $_SESSION['newuser'] = $transid;
+                } else {
+                    $info = "You have not verified your Email";
+                    $_SESSION['info'] = $info;
+                    header('location: ../user-otp.php');
                 }
-                //log user in
-                //header('location: ' . ROOT_URL . '../education/index.php');
-				echo "<script>window.location='../loader.php';</script>";	
             } else {
-				$_SESSION['user-id'] = $user_record['userid'];
-				//header('location: ' . ROOT_URL . '../education/index.php');
-				echo "<script>window.location='loader.php';</script>";
-                //$_SESSION['signin'] = "Please check your input data";
+                //set session for access control
+                
+                $status = $user_record['status'];
+                if ($status == 'verified') {
+                    $_SESSION['user-id'] = $user_record['userid'];
+                     $userid =$_SESSION['user-id'] ;
+                    //log user in
+                     //echo $_SESSION['newuser'];
+                      $_SESSION['newuser'] = $transid;
+                    //header('location: ' . ROOT_URL . '../education/index.php');
+                       
+                     //save user login time
+					    //000000 means user active
+					 $time_in = date("Y-m-d H:i:s");
+					 $time_out ="1";
+					 $query_time = "INSERT INTO logs (userid,time_in,time_out) 
+					VALUES ('$userid','$time_in','$time_out')";
+			          $result_time = mysqli_query($conn,  $query_time) or die(mysqli_error($conn));
+                      
+                      if ($result_time > 0) {
+                        //echo $time_in;
+                        $_SESSION['time_in'] =$time_in;
+                        echo "<script>window.location='loader.php';</script>";
+                      }else{
+                        echo '';
+                      }
+                    
+                    //$_SESSION['signin'] = "Please check your input data";
+                } else {
+                    $info = "You have not verified your Email";
+                    $_SESSION['info'] = $info;
+                    header('location: ../user-otp.php');
+                }
             }
         } else {
-            $_SESSION['signin'] = "User not found";
+            echo "<script>window.location='loader3.php';</script>";
         }
     }
     //if any problem

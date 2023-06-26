@@ -4,12 +4,14 @@
       }
     body{
         background-color:rgb(246, 239, 239);
+        
       } 
 	  
 	  /*-----------------Viewport less than or equal to 1440px----------------*/
   @media (max-width:1440px){
       body{
         background-color:rgb(246, 239, 239);
+          
       }
       form#user_form{
        border:#000 2px solid;
@@ -26,6 +28,7 @@
        padding-top:2px;
        padding-bottom:10px;
        font-size:18px;
+      
       }
 	  .container{
 	   border:#000 2px solid;
@@ -41,7 +44,9 @@
        display:block;
        padding-top:2px;
        padding-bottom:10px;
-       font-size:18px;  
+       font-size:18px;
+     
+      
 	  }
       form#user_form>#phase2,#phase3,#phase4,#phase5,#phase6,#phase7,
          #phase8,#phase9,#show_all_data{
@@ -76,7 +81,9 @@
         text-align:left;
         padding-left:10px;
         transition: .3s; 
+       
       }
+     
       h2{
         color:blue;
         text-decoration:underline;
@@ -210,7 +217,7 @@
   form#user_form{
        border:#000 2px solid;
        padding:3px;
-       width:780px;
+       width:700px;
        height:auto;
        margin-top:10px;
        margin-left:25px;
@@ -378,15 +385,17 @@
      }
   }
 
+
+
  /*-----------------Viewport less than or equal to 520px----------------*/
  @media (max-width:520px){
   form#user_form{
        border:#000 1px solid;
        padding:3px;
-       width:460px;
+       width:400px;
        height:auto;
        margin-top:10px;
-       margin-left:30px;
+       margin-left:10px;
        border-left:1px solid gray;
        border-bottom:1px solid gray;
        background-color:lightgray;
@@ -398,17 +407,17 @@
 	  .container{
 		border:#000 1px solid;
        padding:3px;
-       width:350px;
+       width:280px;
        height:auto;
        margin-top:10px;
-       margin-left:30px;
+       margin-left:15px;
        border-left:1px solid gray;
        border-bottom:1px solid gray;
        background-color:lightgray;
        display:block;
        padding-top:1px;
        padding-bottom:1px;
-       font-size:10px;  
+       font-size:12px;  
 	  }
       .t_input{
         border:none;
@@ -419,11 +428,12 @@
         margin-bottom:10px;
         font-size:10px;
         width:270px;
-        height:20px;
+        height:25px;
         text-align:left;
         padding-left:5px;
         transition: .3s; 
       }
+      
       .tb_input1{
         border:none;
         border-bottom:1px solid lightblue;
@@ -431,9 +441,9 @@
         margin-left:5px;
         margin-top:2px;
         margin-bottom:2px;
-        font-size:12px;
+        font-size:14px;
         width:270px;
-        height:50px;
+        height:55px;
         text-align:left;
         padding-left:5px;
         transition: .3s; 
@@ -481,9 +491,9 @@
         margin-left:5px;
         margin-top:0px;
         margin-bottom:10px;
-        font-size:12px;
+        font-size:14px;
         width:270px;
-        height:20px;
+        height:25px;
         text-align:left;
         padding-left:5px;
         transition: .3s; 
@@ -494,10 +504,10 @@
        height:80%;
       }
       .table_input{
-        font-size:10px;
+        font-size:12px;
         border: 1px solid #f2f2f2;
         width:80%;
-        height:16px;
+        height:20px;
         transition: .3s; 
       }
       .table-button{
@@ -554,6 +564,8 @@
       text-align:center !important;
      }
   }
+
+
 
  /*-----------------Viewport less than or equal to 375px----------------*/
  @media (max-width:375px){

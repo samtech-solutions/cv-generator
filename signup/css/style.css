@@ -170,3 +170,15 @@ input,textarea,select{
     color:var(--color-primary);
     
 }
+
+
+ /*-----------------Viewport less than or equal to 520px----------------*/
+
+ @media (max-width: 520px) {
+    .form_section{
+        display:grid;
+        place-items:center;
+        height:100vh;
+        margin-top:-150px;
+    }
+ }

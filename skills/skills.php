@@ -5,8 +5,9 @@ session_start();
 
  if (isset($_POST['save'])) {
 	$userid =$_SESSION['user-id'];
-    $name =$_POST['name'];
-    $experience =$_POST['experience'];
+
+    $name =filter_var($_POST['name'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $experience =filter_var($_POST['experience'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 	
   
     $query="INSERT INTO skills(userid,name,experience) 

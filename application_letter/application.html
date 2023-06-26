@@ -6,15 +6,283 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>job application letter</title>
     <link href="jquery-ui.css" rel="stylesheet">
-    <link href="../css/style.css" rel="stylesheet">
-	<link href="css/styles.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="bootstrap.min.css" media="all"/>
 	<script src="external/jquery/jquery.js"></script>
     <script src="jquery-ui.js"></script>
     <script src="jsPDF/dist/jspdf.min.js"></script>
     
     <style>
+  #container{
+       height:530px;
+       overflow:hidden;
+       margin-bottom:10px;
+   }
+      #user_form{
+       border:#000 2px solid;
+       padding:5px;
+       width:95%;
+       height:500px;
+       margin-top:5px;
+       margin-left:30px;
+       border-left:2px solid gray;
+       border-bottom:2px solid gray;
+       background-color:lightgray;
+       display:block;
+       padding-top:2px;
+       padding-bottom:10px;
+       font-size:16px;
+      overflow:scroll;
+      }
+     
+      .t_input{
+        border:none;
+        border-bottom:2px solid lightblue;
+        background-color:white;
+        margin-left:10px;
+        margin-top:5px;
+        margin-bottom:5px;
+        font-size:15px;
+        width:90%;
+        height:40px;
+        text-align:left;
+        padding-left:10px;
+      }
+      .tb_input1{
+        border:none;
+        border-bottom:2px solid lightblue;
+        background-color:white;
+        margin-left:10px;
+        margin-top:5px;
+        margin-bottom:5px;
+        font-size:17px;
+        width:90%;
+        height:300px;
+        text-align:left;
+        padding-left:10px;
+      }
+      h2{
+        color:blue;
+        text-decoration:underline;
+      }
+      h3{
+          color:green;
+          text-decoration:underline;
+      }
+      h6{
+        color:red;
+      }
+      p{
+        color:purple;
+        text-align:center;
+
+      }
+      
+      label{
+        color:blue;
+        text-align:left;
+        width:23%;
+        margin-left:10px;
+      }
+      #details>label{
+        color:blue;
+        text-align:right;
+        margin-left:10px;
+        width:23%;
+      }
+       .tb_input{
+        border:none;
+        border-bottom:2px solid lightblue;
+        background-color:white;
+        margin-left:10px;
+        margin-top:5px;
+        margin-bottom:5px;
+        font-size:17px;
+        width:90%;
+        height:40px;
+        text-align:left;
+        padding-left:10px;
+      }
+      .user_data{
+       background-color:white;
+       border-collapse:collapse;
+       height:100%;
+      }
+      .table_input{
+        font-size:16px;
+        border: 1px solid #f2f2f2;
+        width:100%;
+        height:30px;
+      }
+      .table-button{
+        width:140px;
+        height:40px;
+        border:2px solid black;
+        background-color:#333;
+        margin-right:10px;
+        border-radius:40px;
+        color:green;
+      }
+        hr{
+          border:2px solid white;
+        }
+        .btn-success{
+        width:200px;
+        height:40px;
+        border:2px solid black;
+        background-color:#890;
+        margin-right:0px;
+        border-radius:20px;
+       margin-bottom:20px;
+        }
+        span{
+          color:yellow;
+        }
+        table{
+       background-color:white;
+       border-collapse:collapse;
+       
+      }
+   
  
+                /*-----------------Viewport less than or equal to 525px----------------*/
+ 
+ @media (max-width:525px){
+     #container{
+       height:530px;
+       overflow:hidden;
+       margin-bottom:10px;
+   }
+      #user_form{
+       border:#000 1px solid;
+       padding:10px;
+       width:95%;
+       height:500px;
+       margin-top:5px;
+       margin-left:5px;
+       border-left:2px solid gray;
+       border-bottom:2px solid gray;
+       background-color:lightgray;
+       display:block;
+       padding-top:2px;
+       padding-bottom:10px;
+       font-size:18px;
+       overflow:scroll;
+      }
+     
+      .t_input{
+        border:none;
+        border-bottom:2px solid lightblue;
+        background-color:white;
+        margin-left:10px;
+        margin-top:5px;
+        margin-bottom:5px;
+        font-size:17px;
+        width:90%;
+        height:40px;
+        text-align:left;
+        padding-left:10px;
+      }
+      .tb_input1{
+        border:none;
+        border-bottom:2px solid lightblue;
+        background-color:white;
+        margin-left:5px;
+        margin-top:5px;
+        margin-bottom:5px;
+        font-size:15px;
+        width:98%;
+        height:200px;
+        text-align:left;
+        padding-left:10px;
+      }
+      h2{
+        color:blue;
+        text-decoration:underline;
+        font-size:20px;
+      }
+      h3{
+          color:green;
+          text-decoration:underline;
+          font-size:18px;
+      }
+      h6{
+        color:red;
+        font-size:16px;
+      }
+      p{
+        color:purple;
+        text-align:center;
+        font-size:16px;
+
+      }
+      
+      label{
+        color:blue;
+        text-align:left;
+        width:70%;
+        margin-left:10px;
+      }
+      #details>label{
+        color:blue;
+        text-align:right;
+        margin-left:10px;
+        width:60%;
+      }
+       .tb_input{
+        border:none;
+        border-bottom:2px solid lightblue;
+        background-color:white;
+        margin-left:5px;
+        margin-top:5px;
+        margin-bottom:5px;
+        font-size:17px;
+        width:98%;
+        height:40px;
+        text-align:left;
+        padding-left:10px;
+      }
+      .user_data{
+       background-color:white;
+       border-collapse:collapse;
+       height:100%;
+      }
+      .table_input{
+        font-size:16px;
+        border: 1px solid #f2f2f2;
+        width:100%;
+        height:30px;
+      }
+      .table-button{
+        width:140px;
+        height:40px;
+        border:2px solid black;
+        background-color:#333;
+        margin-right:10px;
+        border-radius:40px;
+        color:green;
+      }
+        hr{
+          border:2px solid white;
+        }
+        .btn-success{
+        width:200px;
+        height:40px;
+        border:2px solid black;
+        background-color:#890;
+        margin-right:0px;
+        border-radius:20px;
+       margin-bottom:20px;
+        }
+        span{
+          color:yellow;
+        }
+        table{
+       background-color:white;
+       border-collapse:collapse;
+       
+      }
+   
+    }
     </style>
     
 </head>
@@ -93,6 +361,7 @@
    <script src="../js/custom.js"></script>
 </body>
 </html>
+
 
 <script>
         var name,address,town,date,department,cname,re,letter;

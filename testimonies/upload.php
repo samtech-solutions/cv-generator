@@ -39,6 +39,7 @@ session_start();
                    VALUES('$name','$userid', '$new_img_name')";
             mysqli_query($conn,$sql);
 
+           
             if (mysqli_affected_rows($conn) > 0) { 
                 //echo "<script>alert('YOUR DOCUMENT HAS BEEN SUCCESSFULLY UPLOADED!!!');
                 //window.location.href='index.php';</script>";
@@ -58,4 +59,3 @@ session_start();
  }else{
      header("location: ../testimonies/index.php");
  }
-  ?>
