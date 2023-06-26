@@ -1,0 +1,51 @@
+form#user_form{
+       border:#000 3px solid;
+       padding:16px;
+       width:700px;
+       height:auto;
+      }
+      form#user_form>#phase2,#phase3,#show_all_data{
+          display:none;
+      }
+      h2{
+        color:blue;
+        text-decoration:underline;
+      }
+      h3{
+          color:green;
+          text-decoration:underline;
+      }
+      h6{
+        color:red;
+      }
+      p{
+        color:purple;
+        text-align:center;
+
+      }
+      #status{
+          color:red;
+          display:center;
+      }
+      label{
+        color:blue;
+      }
+      
+      table{
+       border:0px solid black !important;
+       border-collapse:collapse;
+       width:100%;
+      }
+      th{
+        border:0px solid black;
+        border-collapse:collapse;
+        height:50px;
+        color:green;
+        font-size:20px;
+      }
+      td{
+        border:0px solid black;
+        width:250px;
+        height:30px;
+      }
+      
